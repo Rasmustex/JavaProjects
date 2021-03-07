@@ -1,6 +1,3 @@
 #!/bin/sh
-#Run as root
-mkdir $HOME/TicWackToe
-cp $PWD/TicWackToe.jar $HOME/TicWackToe/
-cp $PWD/run.sh $HOME/TicWackToe/
-ln -s $HOME/TicWackToe/run.sh /usr/bin/tictac
+DIR="$(dirname "$(readlink -f "$0")")"
+ln -s $DIR/run.sh /usr/bin/tictac
